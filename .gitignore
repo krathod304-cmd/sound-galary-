@@ -13,3 +13,21 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Log files and temporary artifacts
+*.txt
+*.png
+*.xml
+!/app/src/main/res/**/*.xml
+!/app/lint.xml
+!/otp-flow-ui.xml
+!/otp-flow-ui-2.xml
+!/tmp-login-ui.xml
+!/tmp-phone-ui.xml
+!/ui-home-before.xml
+!/ui-home-after-patch.xml
+!/ui-library-ready.xml
+
+# Project specific ignores
+/app/google-services.json
+.kotlin/
