@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchInputLayout"
+            style="@style/Widget.Spotify.TextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/offline_search_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/searchEditText"
+                style="@style/Widget.Spotify.TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/offline_search_browse"
+            android:textColor="@color/spotify_text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:columnCount="2"
+            android:rowCount="3">
+
+            <TextView
+                android:id="@+id/categoryPopCard"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_columnWeight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_category_pop"
+                android:gravity="bottom|start"
+                android:padding="16dp"
+                android:text="@string/offline_category_pop"
+                android:textColor="@color/spotify_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/categoryRockCard"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_category_rock"
+                android:gravity="bottom|start"
+                android:padding="16dp"
+                android:text="@string/offline_category_rock"
+                android:textColor="@color/spotify_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/categoryFocusCard"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_columnWeight="1"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_category_focus"
+                android:gravity="bottom|start"
+                android:padding="16dp"
+                android:text="@string/offline_category_focus"
+                android:textColor="@color/spotify_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/categoryJazzCard"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_category_jazz"
+                android:gravity="bottom|start"
+                android:padding="16dp"
+                android:text="@string/offline_category_jazz"
+                android:textColor="@color/spotify_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/categoryIndieCard"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_columnWeight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_category_indie"
+                android:gravity="bottom|start"
+                android:padding="16dp"
+                android:text="@string/offline_category_indie"
+                android:textColor="@color/spotify_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/categorySleepCard"
+                android:layout_width="0dp"
+                android:layout_height="96dp"
+                android:layout_columnWeight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_category_sleep"
+                android:gravity="bottom|start"
+                android:padding="16dp"
+                android:text="@string/offline_category_sleep"
+                android:textColor="@color/spotify_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="@string/offline_search_results"
+            android:textColor="@color/spotify_text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/searchEmptyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/offline_search_empty"
+            android:textColor="@color/spotify_text_tertiary"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchResultsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+</ScrollView>

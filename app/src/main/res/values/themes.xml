@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Spotify" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/spotify_green</item>
+        <item name="colorOnPrimary">@color/spotify_black</item>
+        <item name="colorPrimaryContainer">@color/spotify_green_deep</item>
+        <item name="colorOnPrimaryContainer">@color/spotify_text_primary</item>
+        <item name="colorSecondary">@color/spotify_green</item>
+        <item name="colorOnSecondary">@color/spotify_black</item>
+        <item name="colorSurface">@color/spotify_surface</item>
+        <item name="colorSurfaceVariant">@color/spotify_surface_alt</item>
+        <item name="colorOnSurface">@color/spotify_text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/spotify_text_secondary</item>
+        <item name="android:windowBackground">@color/spotify_black</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/spotify_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
+    </style>
+
+    <style name="Theme.Spotify" parent="Base.Theme.Spotify" />
+</resources>

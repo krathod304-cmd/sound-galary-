@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="14dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/bg_album_placeholder"
+        android:clipToOutline="true">
+
+        <ImageView
+            android:id="@+id/highlightArtworkImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/highlightInitialText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/spotify_text_primary"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/highlightLikeButton"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_player_secondary"
+            android:contentDescription="@string/online_like"
+            android:padding="10dp"
+            android:src="@drawable/ic_favorite_border"
+            app:tint="@color/spotify_text_primary" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/highlightTitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:textColor="@color/spotify_text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/highlightMetaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:textColor="@color/spotify_text_secondary"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/highlightAlbumText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:maxLines="1"
+        android:textColor="@color/spotify_text_tertiary"
+        android:textSize="12sp" />
+</LinearLayout>

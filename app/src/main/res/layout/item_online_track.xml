@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="88dp"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_album_placeholder"
+        android:clipToOutline="true">
+
+        <ImageView
+            android:id="@+id/onlineTrackArtworkImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/onlineTrackInitialText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/spotify_text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/onlineTrackTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/spotify_text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/onlineTrackMetaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:textColor="@color/spotify_text_secondary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/onlineTrackStatsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:textColor="@color/spotify_text_tertiary"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/downloadedBadgeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_chip"
+        android:paddingStart="10dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="6dp"
+        android:text="@string/online_downloaded"
+        android:textColor="@color/spotify_green"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/likeButton"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_player_secondary"
+        android:contentDescription="@string/online_like"
+        android:padding="12dp"
+        android:src="@drawable/ic_favorite_border"
+        app:tint="@color/spotify_text_primary" />
+
+    <ImageButton
+        android:id="@+id/downloadButton"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_player_secondary"
+        android:contentDescription="@string/online_download"
+        android:padding="12dp"
+        android:src="@drawable/ic_download"
+        app:tint="@color/spotify_text_primary" />
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:background="@drawable/bg_player_primary"
+        android:contentDescription="@string/offline_play_track"
+        android:padding="12dp"
+        android:src="@drawable/ic_play_light"
+        app:tint="@color/spotify_black" />
+</LinearLayout>
